@@ -1,9 +1,5 @@
 package io.leopard.test;
 
-import io.leopard.data4j.env.EnvUtil;
-import io.leopard.test.internal.TestContextLoader;
-import io.leopard.test4j.mock.DefaultParameter;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.junit.runner.RunWith;
@@ -18,14 +14,37 @@ import org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests;
  * 
  */
 @ContextConfiguration(loader = TestContextLoader.class)
-@ActiveProfiles(value = EnvUtil.ENV_DEV, inheritProfiles = false)
-@RunWith(LeopardJUnit4ClassRunner.class)
-public class IntegrationTests extends AbstractJUnit4SpringContextTests implements DefaultParameter {
+@ActiveProfiles(value = "dev", inheritProfiles = false)
+@RunWith(IntegrationRunner.class)
+public class IntegrationTests extends AbstractJUnit4SpringContextTests {
 
 	protected Log logger = LogFactory.getLog(this.getClass());
 
-	// @BeforeClass
-	// public static void before() {
-	// DnsConfig.initHosts();
-	// }
+	
+	// /** 默认username:username */
+	// public String username = "username";
+	//
+	// /** 默认passport:passport */
+	// public String passport = "passport";
+	//
+	// public String sessUsername = "username";
+	//
+	// public int pageId = 1;
+	//
+	// public long sessUid = 1;
+	//
+	// public long uid = 1;
+	//
+	// /** 默认游戏ID:ddt */
+	// public String gameId = "ddt";
+	//
+	// /** 默认游戏serverId:s1 */
+	// public String serverId = "s1";
+	// /** 用户IP */
+	// public String proxyIp = "127.0.0.1";
+	//
+	// public String ANY_STR = "any";
+	//
+	// public int ANY_INT = 8888;
+
 }

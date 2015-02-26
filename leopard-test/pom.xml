@@ -9,17 +9,16 @@
 	<artifactId>leopard-test</artifactId>
 	<name>测试包</name>
 
-
-
 	<dependencies>
-		<dependency>
-			<groupId>io.leopard</groupId>
-			<artifactId>leopard-data</artifactId>
-			<version>0.0.2-SNAPSHOT</version><!--$NO-MVN-MAN-VER$ -->
-		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
@@ -28,62 +27,20 @@
 			<scope>compile</scope>
 		</dependency>
 
-		<dependency>
-			<groupId>org.mockito</groupId>
-			<artifactId>mockito-all</artifactId>
-			<scope>compile</scope>
-		</dependency>
 
-		<dependency>
-			<groupId>io.leopard.test4j</groupId>
-			<artifactId>test4j-mock</artifactId>
-			<scope>compile</scope>
-			<exclusions>
-				<exclusion>
-					<artifactId>cglib-nodep</artifactId>
-					<groupId>cglib</groupId>
-				</exclusion>
-			</exclusions>
-		</dependency>
 
 		<dependency>
 			<groupId>io.leopard</groupId>
 			<artifactId>javahost</artifactId>
-			<version>0.1</version>
+			<version>0.3-SNAPSHOT</version>
 		</dependency>
-		
+
+		<dependency>
+			<groupId>io.leopard</groupId>
+			<artifactId>autounit</artifactId>
+			<version>0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>io.leopard.maven.plugins</groupId>
-				<artifactId>subproject-maven-plugin</artifactId>
-				<version>0.0.1-SNAPSHOT</version>
-				<executions>
-					<execution>
-						<id>add-sources</id>
-						<phase>generate-sources</phase>
-						<goals>
-							<goal>add-sources</goal>
-						</goals>
-						<configuration>
-							<sources>
-								<source>modules/test4j/test4j-mock</source>
-							</sources>
-							<dependencies>
-								<dependency>
-									<groupId>io.leopard.test4j</groupId>
-									<artifactId>test4j-mock</artifactId>
-									<scope>provided</scope>
-								</dependency>
-							</dependencies>
-						</configuration>
-
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
 
 </project>
