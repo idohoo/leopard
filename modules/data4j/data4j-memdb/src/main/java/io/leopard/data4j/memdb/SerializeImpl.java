@@ -1,21 +1,22 @@
 package io.leopard.data4j.memdb;
 
+import io.leopard.burrow.lang.Json;
+
 public class SerializeImpl implements Serialize {
+	private static Serialize instance = new SerializeImpl();
 
 	public static Serialize getInstance() {
-		return null;
+		return instance;
 	}
 
 	@Override
 	public String serialize(Object obj) {
-		// TODO Auto-generated method stub
-		return null;
+		return Json.toJson(obj);
 	}
 
 	@Override
 	public <T> T toObject(String json, Class<T> clazz) {
-		// TODO Auto-generated method stub
-		return null;
+		return Json.toObject(json, clazz);
 	}
 
 }
