@@ -8,7 +8,6 @@ import io.leopard.jdbc.MysqlDsnDataSource;
 import io.leopard.memcache.MemcacheRedisImpl;
 import io.leopard.redis.RedisHashImpl;
 import io.leopard.redis.RedisImpl;
-import io.leopard.redis.SpringJedisConnectionFactory;
 import redis.clients.jedis.JedisPoolConfig;
 
 public class DataSourceClassUtil {
@@ -55,10 +54,6 @@ public class DataSourceClassUtil {
 
 	public static Class<?> getRedisHashImpl() {
 		return findClass(RedisHashImpl.class);
-	}
-
-	public static Class<?> getSpringJedisConnectionFactory() {
-		return findClass(SpringJedisConnectionFactory.class);
 	}
 
 	public static Class<?> getJedisPoolConfig() {

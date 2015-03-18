@@ -164,11 +164,6 @@ public class RedisDsnBeanDefinitionParser implements BeanDefinitionParser {
 		builder.setInitMethodName("init");
 		builder.setDestroyMethodName("destroy");
 
-		if ("true".equals(createConnectionFactory)) {
-			this.createJedisPoolConfig(parserContext, id, Integer.valueOf(maxActive));
-			this.createJedisConnectionFactory(parserContext, id, server, Integer.valueOf(timeout));
-		}
-
 		return RegisterComponentUtil.registerComponent(parserContext, builder, id);
 	}
 
@@ -178,29 +173,29 @@ public class RedisDsnBeanDefinitionParser implements BeanDefinitionParser {
 	// <property name="maxWait" value="1000" />
 	// <property name="testOnBorrow" value="true" />
 	// </bean>
-	protected void createJedisPoolConfig(ParserContext parserContext, String beanId, int maxActive) {
-		BeanDefinitionBuilder builder = BeanDefinitionBuilder.genericBeanDefinition(DataSourceClassUtil.getJedisPoolConfig());
-		builder.addPropertyValue("maxActive", maxActive);
-		builder.addPropertyValue("maxIdle", maxActive);
-		// ahai 20131024 已建立的连接不回收，高并发时建立连接会很耗资源
-		builder.addPropertyValue("minEvictableIdleTimeMillis", -1);
+	// protected void createJedisPoolConfig(ParserContext parserContext, String beanId, int maxActive) {
+	// BeanDefinitionBuilder builder = BeanDefinitionBuilder.genericBeanDefinition(DataSourceClassUtil.getJedisPoolConfig());
+	// builder.addPropertyValue("maxActive", maxActive);
+	// builder.addPropertyValue("maxIdle", maxActive);
+	// // ahai 20131024 已建立的连接不回收，高并发时建立连接会很耗资源
+	// builder.addPropertyValue("minEvictableIdleTimeMillis", -1);
+	//
+	// builder.setScope(BeanDefinition.SCOPE_SINGLETON);
+	// RegisterComponentUtil.registerComponent(parserContext, builder, beanId + "PoolConfig");
+	// }
 
-		builder.setScope(BeanDefinition.SCOPE_SINGLETON);
-		RegisterComponentUtil.registerComponent(parserContext, builder, beanId + "PoolConfig");
-	}
-
-	protected void createJedisConnectionFactory(ParserContext parserContext, String beanId, String server, long timeout) {
-		BeanDefinitionBuilder builder = BeanDefinitionBuilder.genericBeanDefinition(DataSourceClassUtil.getSpringJedisConnectionFactory());
-		builder.addPropertyValue("server", server);
-		builder.addPropertyValue("timeout", timeout);
-		// builder.addPropertyValue("password", "test");
-		builder.addPropertyValue("usePool", "true");
-		builder.addPropertyReference("poolConfig", beanId + "PoolConfig");
-		// ahai 20131024 已建立的连接不回收，高并发时建立连接会很耗资源
-
-		builder.setScope(BeanDefinition.SCOPE_SINGLETON);
-		RegisterComponentUtil.registerComponent(parserContext, builder, beanId + "ConnectionFactory");
-	}
+	// protected void createJedisConnectionFactory(ParserContext parserContext, String beanId, String server, long timeout) {
+	// BeanDefinitionBuilder builder = BeanDefinitionBuilder.genericBeanDefinition(DataSourceClassUtil.getSpringJedisConnectionFactory());
+	// builder.addPropertyValue("server", server);
+	// builder.addPropertyValue("timeout", timeout);
+	// // builder.addPropertyValue("password", "test");
+	// builder.addPropertyValue("usePool", "true");
+	// builder.addPropertyReference("poolConfig", beanId + "PoolConfig");
+	// // ahai 20131024 已建立的连接不回收，高并发时建立连接会很耗资源
+	//
+	// builder.setScope(BeanDefinition.SCOPE_SINGLETON);
+	// RegisterComponentUtil.registerComponent(parserContext, builder, beanId + "ConnectionFactory");
+	// }
 
 	// <bean id="gameInfoJedisConnectionFactory"
 	// class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory">
