@@ -94,7 +94,6 @@
 								<source>modules/data4j/data4j-log</source>
 								<source>modules/data4j/data4j-env</source>
 								<source>modules/data4j/data4j-biz</source>
-								<source>modules/data4j/data4j-pubsub</source>
 							</sources>
 							<dependencies>
 								<dependency>
