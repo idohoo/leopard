@@ -24,7 +24,7 @@
 		</dependency>
 		<dependency>
 			<groupId>io.leopard.data4j</groupId>
-			<artifactId>data4j-pubsub</artifactId>
+			<artifactId>data4j-memdb</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
