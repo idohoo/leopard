@@ -1,7 +1,5 @@
 package io.leopard.data4j.memdb;
 
-import io.leopard.burrow.lang.Json;
-
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -26,7 +24,7 @@ public class MemdbImpl implements Memdb {
 	@Override
 	public <T> T get(String key, Class<T> clazz) {
 		String json = this.get(key);
-		return Json.toObject(json, clazz);
+		return SerializeImpl.getInstance().toObject(json, clazz);
 	}
 
 	// @Override

@@ -1,12 +1,9 @@
 package io.leopard.data4j.memdb;
 
-import io.leopard.burrow.lang.Json;
-
 import org.junit.Assert;
 import org.junit.Test;
 
 public class MemdbImplTest {
-
 
 	@Test
 	public void get() {
@@ -18,16 +15,17 @@ public class MemdbImplTest {
 	@Test
 	public void get2() {
 		MemdbImpl memdb = new MemdbImpl();
-		memdb.set("key", Json.toJson("value"));
-		Assert.assertEquals("value", memdb.get("key",String.class));
+		memdb.set("key", SerializeImpl.getInstance().serialize("value"));
+		Assert.assertEquals("value", memdb.get("key", String.class));
 	}
+
 	@Test
 	public void remove() {
 		MemdbImpl memdb = new MemdbImpl();
 		memdb.set("key", "value");
 		Assert.assertTrue(memdb.remove("key"));
 		Assert.assertFalse(memdb.remove("key"));
-		
+
 		Assert.assertNull(memdb.get("key"));
 	}
 
@@ -35,8 +33,7 @@ public class MemdbImplTest {
 	public void dbSize() {
 		MemdbImpl memdb = new MemdbImpl();
 		memdb.set("key", "value");
-		Assert.assertEquals(1L, memdb.dbSize()
-				);
+		Assert.assertEquals(1L, memdb.dbSize());
 	}
 
 	@Test

@@ -1,9 +1,9 @@
 package io.leopard.data4j.memdb.rsync;
 
-import io.leopard.burrow.lang.Json;
 import io.leopard.data4j.memdb.MemdbRsyncQueue;
 import io.leopard.data4j.memdb.QueueBean;
 import io.leopard.data4j.memdb.QueueListener;
+import io.leopard.data4j.memdb.SerializeImpl;
 
 import org.junit.Test;
 import org.mockito.Mockito;
@@ -23,9 +23,9 @@ public class QueueListenerTest {
 		QueueBean bean = new QueueBean();
 		bean.setKey("key");
 
-		this.listener.onMessage("channel", Json.toJson(bean));
+		this.listener.onMessage("channel", SerializeImpl.getInstance().serialize(bean));
 		bean.setSender("sender");
-		this.listener.onMessage("channel", Json.toJson(bean));
+		this.listener.onMessage("channel", SerializeImpl.getInstance().serialize(bean));
 	}
 
 	@Test

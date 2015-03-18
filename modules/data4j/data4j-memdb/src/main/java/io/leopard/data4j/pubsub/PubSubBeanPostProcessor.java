@@ -1,6 +1,5 @@
 package io.leopard.data4j.pubsub;
 
-import io.leopard.burrow.lang.AssertUtil;
 import io.leopard.redis.Redis;
 
 import org.springframework.beans.BeansException;
@@ -20,7 +19,10 @@ public class PubSubBeanPostProcessor implements BeanPostProcessor, BeanFactoryAw
 
 	protected Redis getRedis() {
 		Redis redis = this.findRedis();
-		AssertUtil.assertNotNull(redis, "找不到redis连接 .");
+		// AssertUtil.assertNotNull(redis, "找不到redis连接 .");
+		if (redis == null) {
+			throw new IllegalArgumentException("找不到redis连接 .");
+		}
 		return redis;
 	}
 

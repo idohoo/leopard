@@ -1,6 +1,5 @@
 package io.leopard.data4j.memdb;
 
-import io.leopard.burrow.lang.Json;
 import io.leopard.redis.Redis;
 
 public class MemdbRsyncServiceRedisImpl implements MemdbRsyncService {
@@ -27,7 +26,7 @@ public class MemdbRsyncServiceRedisImpl implements MemdbRsyncService {
 		queueBean.setKey(key);
 		queueBean.setValue(value);
 		queueBean.setSender(sender);
-		redis.publish(channel, Json.toJson(queueBean));
+		redis.publish(channel, SerializeImpl.getInstance().serialize(queueBean));
 		return true;
 	}
 

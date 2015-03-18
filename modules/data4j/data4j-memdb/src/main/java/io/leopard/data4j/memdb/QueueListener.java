@@ -1,6 +1,5 @@
 package io.leopard.data4j.memdb;
 
-import io.leopard.burrow.lang.Json;
 import redis.clients.jedis.JedisPubSub;
 
 public class QueueListener extends JedisPubSub {
@@ -19,7 +18,7 @@ public class QueueListener extends JedisPubSub {
 	// 取得订阅的消息后的处理
 	@Override
 	public void onMessage(String channel, String message) {
-		QueueBean queueBean = Json.toObject(message, QueueBean.class);
+		QueueBean queueBean = SerializeImpl.getInstance().toObject(message, QueueBean.class);
 
 		boolean isMySelf = this.sender.equals(queueBean.getSender());
 		// if (!listenOneSelf) {
