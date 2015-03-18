@@ -7,6 +7,11 @@
 	</parent>
 	<artifactId>data4j-biz</artifactId>
 	<dependencies>
+
+		<dependency>
+			<groupId>io.leopard.burrow</groupId>
+			<artifactId>burrow-lang</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>io.leopard</groupId>
 			<artifactId>leopard-redis</artifactId>
