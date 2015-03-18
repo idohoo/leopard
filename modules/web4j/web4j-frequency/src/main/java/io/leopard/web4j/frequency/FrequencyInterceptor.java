@@ -1,7 +1,5 @@
 package io.leopard.web4j.frequency;
 
-import io.leopard.web4j.servlet.RequestUtil;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -35,7 +33,8 @@ public class FrequencyInterceptor implements HandlerInterceptor {
 		if (account == null) {
 			return true;
 		}
-		String requestUri = RequestUtil.getRequestContextUri(request);
+		// String requestUri = RequestUtil.getRequestContextUri(request);
+		String requestUri = request.getRequestURI();// 包含ContextPath也没有问题
 		frequencyLei.request(account.toString(), requestUri, seconds);
 		return true;
 	}

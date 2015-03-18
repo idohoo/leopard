@@ -1,14 +1,12 @@
 package io.leopard.web4j.frequency;
 
-import io.leopard.core.exception.LeopardRuntimeException;
-
 /**
  * 访问太频繁.
  * 
  * @author ahai
  * 
  */
-public class FrequencyException extends LeopardRuntimeException {
+public class FrequencyException extends RuntimeException {
 
 	private static final long serialVersionUID = 1L;
 

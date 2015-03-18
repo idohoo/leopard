@@ -1,6 +1,5 @@
 package io.leopard.web4j.frequency;
 
-import io.leopard.core.exception.ConnectionLimitException;
 import io.leopard.redis.Redis;
 
 import java.util.Map;
@@ -40,7 +39,7 @@ public class FrequencyLeiImpl implements FrequencyLei, BeanFactoryAware {
 		String key = this.getKey(user, uri);
 		Long result = redis.setnx(key, "");
 		if (result == 0) {
-			throw new ConnectionLimitException(user, uri);
+			throw new FrequencyException(user, uri);
 		}
 		redis.expire(key, seconds);
 	}
