@@ -1,7 +1,5 @@
 package io.leopard.data4j.env;
 
-import io.leopard.core.exception.IORuntimeException;
-
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -44,7 +42,7 @@ public class LogConfigLeiImpl implements LogConfigLei {
 				is.close();
 			}
 			catch (IOException e) {
-				throw new IORuntimeException(e.getMessage(), e);
+				throw new RuntimeException(e.getMessage(), e);
 			}
 			try {
 				Class.forName("io.leopard.monitor.alarm.DailyAutoRollingFileAppender");

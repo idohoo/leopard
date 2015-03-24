@@ -1,7 +1,5 @@
 package io.leopard.data4j.env;
 
-import io.leopard.burrow.LeopardLei;
-
 /**
  * 环境配置.
  * 
@@ -9,7 +7,7 @@ import io.leopard.burrow.LeopardLei;
  *
  */
 // Leopard Extended Interface
-public interface EnvLei extends LeopardLei {
+public interface EnvLei {
 
 	/**
 	 * 是否启用当前.

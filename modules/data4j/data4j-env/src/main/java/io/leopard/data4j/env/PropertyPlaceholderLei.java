@@ -1,7 +1,5 @@
 package io.leopard.data4j.env;
 
-import io.leopard.burrow.LeopardLei;
-
 import org.springframework.core.io.Resource;
 
 /**
@@ -10,7 +8,7 @@ import org.springframework.core.io.Resource;
  * @author 阿海
  *
  */
-public interface PropertyPlaceholderLei extends LeopardLei {
+public interface PropertyPlaceholderLei {
 
 	Resource[] getResources(String env);
 }

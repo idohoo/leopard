@@ -3,8 +3,6 @@ package io.leopard.data4j.env;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.commons.lang.NotImplementedException;
-
 public class EnvLeiImpl implements EnvLei {
 
 	private static EnvLei instance = new EnvLeiImpl();
@@ -64,7 +62,7 @@ public class EnvLeiImpl implements EnvLei {
 
 	@Override
 	public boolean isEnabled() {
-		throw new NotImplementedException();
+		throw new UnsupportedOperationException("Not Implemented");
 	}
 
 	// @Override
