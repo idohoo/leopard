@@ -85,14 +85,11 @@
 							<sources>
 								<source>modules/burrow/burrow-lang</source>
 								<source>modules/data4j/data4j-cache</source>
-								<source>modules/data4j/data4j-jdbc</source>
 								<source>modules/data4j/data4j-memcache</source>
 								<source>modules/data4j/data4j-memdb</source>
 								<source>modules/data4j/data4j-mongo</source>
-								<source>modules/data4j/data4j-redis</source>
 								<source>modules/data4j/data4j-schema</source>
 								<source>modules/data4j/data4j-log</source>
-								<source>modules/data4j/data4j-env</source>
 								<source>modules/data4j/data4j-biz</source>
 							</sources>
 							<dependencies>

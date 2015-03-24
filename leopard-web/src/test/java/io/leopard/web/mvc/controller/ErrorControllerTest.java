@@ -1,10 +1,6 @@
 package io.leopard.web.mvc.controller;
 
-import io.leopard.test.mock.Mock;
-
 public class ErrorControllerTest {
-
-	protected ErrorController controller = Mock.spy(this, ErrorController.class);
 
 	// private ErrorPageHandler errorPageHandler;
 
