@@ -2,9 +2,9 @@ package io.leopard.web4j.nobug.csrf;
 
 import io.leopard.burrow.timer.SimpleTimer;
 import io.leopard.burrow.util.ListUtil;
-import io.leopard.data4j.jdbc.CreateTableUtil;
-import io.leopard.data4j.jdbc.CreateTableUtil.GetSql;
-import io.leopard.data4j.jdbc.Jdbc;
+import io.leopard.jdbc.CreateTableUtil;
+import io.leopard.jdbc.CreateTableUtil.GetSql;
+import io.leopard.jdbc.Jdbc;
 import io.leopard.web4j.nobug.DomainWhiteListConfig;
 import io.leopard.web4j.nobug.RefererSecurityValidator;
 

@@ -1,9 +1,9 @@
 package io.leopard.web4j.permission;
 
 import io.leopard.burrow.util.ListUtil;
-import io.leopard.data4j.jdbc.CreateTableUtil;
-import io.leopard.data4j.jdbc.CreateTableUtil.GetSql;
-import io.leopard.data4j.jdbc.Jdbc;
+import io.leopard.jdbc.CreateTableUtil;
+import io.leopard.jdbc.CreateTableUtil.GetSql;
+import io.leopard.jdbc.Jdbc;
 
 import java.util.List;
 

@@ -1,10 +1,9 @@
 package io.leopard.web4j.command;
 
-import io.leopard.data4j.context.LeopardClassPathXmlApplicationContext;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class ContextFactoryImpl implements IContextFactory {
 
@@ -22,7 +21,7 @@ public class ContextFactoryImpl implements IContextFactory {
 
 	public synchronized AbstractApplicationContext getApplicationContext(String configLocation) {
 		String[] filenames = { "classpath:/leopard/applicationContext.xml", configLocation };
-		return new LeopardClassPathXmlApplicationContext(filenames);
+		return new ClassPathXmlApplicationContext(filenames);
 	}
 
 	/**
