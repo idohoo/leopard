@@ -39,6 +39,7 @@ public class MockTransactionalTests extends AbstractTransactionalJUnit4SpringCon
 			e.printStackTrace();
 		}
 	}
+	
 
 	private void inject() throws IllegalArgumentException, IllegalAccessException {
 		String classSimpleName = this.getClass().getSimpleName();
