@@ -20,6 +20,7 @@ import com.google.inject.Inject;
 
 public class RedisBaseImpl extends ContextImpl {
 
+	
 	@Inject
 	protected Jdbc jdbc;
 
