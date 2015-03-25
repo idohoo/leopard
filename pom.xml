@@ -230,6 +230,11 @@
 		<module>leopard-web</module>
 		<module>leopard-netty</module>
 		<module>leopard-parent</module>
+		<module>leopard-redis</module>
+		<module>leopard-memcache</module>
+		<module>leopard-jdbc</module>
+		<module>leopard-schema</module>
+		<module>leopard-cache</module>
 	</modules>
 
 
