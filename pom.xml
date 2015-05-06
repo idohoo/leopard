@@ -237,6 +237,8 @@
 		<module>leopard-log</module>
 		<module>leopard-mongo</module>
 		<module>leopard-biz</module>
+		<module>leopard-web-trynb</module>
+		<module>leopard-web-passport</module>
 	</modules>
 
 
