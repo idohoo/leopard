@@ -7,6 +7,7 @@ package io.leopard.redis.memory;
  * 
  */
 public interface IRedisKey {
+	
 	Boolean exists(String key);
 
 	Long expire(String key, int seconds);
