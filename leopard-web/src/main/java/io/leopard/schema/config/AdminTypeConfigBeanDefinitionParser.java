@@ -7,6 +7,7 @@ import org.springframework.beans.factory.xml.ParserContext;
 
 public class AdminTypeConfigBeanDefinitionParser implements IConfigBeanDefinitionParser {
 
+	
 	@Override
 	public void parse(final String adminType, ParserContext parserContext) {
 		BeanDefinitionParserUtil.createBean(parserContext, "adminDaoMysqlImpl", AdminDaoMysqlImpl.class, true);
