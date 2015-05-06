@@ -236,6 +236,7 @@
 		<module>leopard-jdbc</module>
 		<module>leopard-schema</module>
 		<module>leopard-cache</module>
+		<module>leopard-lang</module>
 	</modules>
 
 

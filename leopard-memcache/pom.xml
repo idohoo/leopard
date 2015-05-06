@@ -41,7 +41,6 @@
 		<dependency>
 			<groupId>io.leopard.burrow</groupId>
 			<artifactId>burrow-lang</artifactId>
-			<version>0.0.5-SNAPSHOT</version>
 			<scope>test</scope>
 		</dependency>
 
