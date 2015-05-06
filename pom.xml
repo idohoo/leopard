@@ -237,8 +237,30 @@
 		<module>leopard-log</module>
 		<module>leopard-mongo</module>
 		<module>leopard-biz</module>
-		<module>leopard-web-trynb</module>
-		<module>leopard-web-passport</module>
+		<!-- -->
+		<module>web4j-admin</module>
+		<module>web4j-all</module>
+		<module>web4j-allow</module>
+		<module>web4j-captcha</module>
+		<module>web4j-command</module>
+		<module>web4j-frequency</module>
+		<module>web4j-interceptor</module>
+		<module>web4j-mvc</module>
+		<module>web4j-nobug</module>
+		<module>web4j-parameter</module>
+		<module>web4j-passport</module>
+		<module>web4j-permission</module>
+		<module>web4j-proxy</module>
+		<module>web4j-servlet</module>
+		<module>web4j-session</module>
+		<module>web4j-taglib</module>
+		<module>web4j-trynb</module>
+		<module>web4j-validator</module>
+		<module>web4j-view</module>
+
+
+
+
 	</modules>
 
 
