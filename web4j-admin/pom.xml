@@ -10,20 +10,21 @@
 		<dependency>
 			<groupId>io.leopard</groupId>
 			<artifactId>leopard-lang</artifactId>
+			<version>0.0.2-SNAPSHOT</version>
 		</dependency>
 		<dependency>
-			<groupId>io.leopard.web4j</groupId>
+			<groupId>io.leopard</groupId>
 			<artifactId>web4j-servlet</artifactId>
 			<version>0.0.2-SNAPSHOT</version>
 		</dependency>
-		
+
 		<dependency>
-			<groupId>io.leopard.web4j</groupId>
+			<groupId>io.leopard</groupId>
 			<artifactId>web4j-passport</artifactId>
 			<version>0.0.2-SNAPSHOT</version>
 		</dependency>
 		<dependency>
-			<groupId>io.leopard.web4j</groupId>
+			<groupId>io.leopard</groupId>
 			<artifactId>web4j-parameter</artifactId>
 			<version>0.0.2-SNAPSHOT</version>
 		</dependency>
