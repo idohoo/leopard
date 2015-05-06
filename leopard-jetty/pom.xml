@@ -12,19 +12,10 @@
 		<jetty.jsp.version>8.1.10.v20130312</jetty.jsp.version>
 	</properties>
 
-
-
 	<dependencies>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-webmvc</artifactId>
-		</dependency>
 
 
-		<dependency>
-			<groupId>commons-lang</groupId>
-			<artifactId>commons-lang</artifactId>
-		</dependency>
+
 
 		<!-- servlet3.0 begin -->
 		<dependency>

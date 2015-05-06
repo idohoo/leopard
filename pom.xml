@@ -229,6 +229,7 @@
 		<module>leopard-monitor</module>
 		<module>leopard-web</module>
 		<module>leopard-netty</module>
+		<module>leopard-jetty</module>
 		<module>leopard-parent</module>
 		<module>leopard-redis</module>
 		<module>leopard-memcache</module>
