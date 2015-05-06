@@ -18,6 +18,7 @@ import redis.clients.jedis.ZParams;
  */
 public interface Redis extends JedisCommands {
 
+	
 	/**
 	 * 容器初始化
 	 */
