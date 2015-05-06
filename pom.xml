@@ -233,6 +233,10 @@
 		<module>leopard-cache</module>
 		<module>leopard-lang</module>
 		<module>leopard-xparam</module>
+		<module>leopard-memdb</module>
+		<module>leopard-log</module>
+		<module>leopard-mongo</module>
+		<module>leopard-biz</module>
 	</modules>
 
 
