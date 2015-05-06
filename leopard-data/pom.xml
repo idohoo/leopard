@@ -15,7 +15,7 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>io.leopard.data4j</groupId>
 			<artifactId>data4j-all</artifactId>
@@ -43,7 +43,22 @@
 		<dependency>
 			<groupId>io.leopard</groupId>
 			<artifactId>leopard-jdbc</artifactId>
-			<version>0.1-SNAPSHOT</version>
+			<version>0.0.2-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>io.leopard</groupId>
+			<artifactId>leopard-redis</artifactId>
+			<version>0.0.2-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>io.leopard</groupId>
+			<artifactId>leopard-memcache</artifactId>
+			<version>0.0.2-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>io.leopard</groupId>
+			<artifactId>leopard-cache</artifactId>
+			<version>0.0.2-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>redis.clients</groupId>
@@ -68,42 +83,5 @@
 		</dependency>
 	</dependencies>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>io.leopard.maven.plugins</groupId>
-				<artifactId>subproject-maven-plugin</artifactId>
-				<version>0.0.1-SNAPSHOT</version>
-				<executions>
-					<execution>
-						<id>add-sources</id>
-						<phase>generate-sources</phase>
-						<goals>
-							<goal>add-sources</goal>
-						</goals>
-						<configuration>
-							<sources>
-								<source>modules/burrow/burrow-lang</source>
-								<source>modules/data4j/data4j-cache</source>
-								<source>modules/data4j/data4j-memcache</source>
-								<source>modules/data4j/data4j-memdb</source>
-								<source>modules/data4j/data4j-mongo</source>
-								<source>modules/data4j/data4j-schema</source>
-								<source>modules/data4j/data4j-log</source>
-								<source>modules/data4j/data4j-biz</source>
-							</sources>
-							<dependencies>
-								<dependency>
-									<groupId>io.leopard.data4j</groupId>
-									<artifactId>data4j-all</artifactId>
-									<scope>provided</scope>
-								</dependency>
-							</dependencies>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
 
 </project>

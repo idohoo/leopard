@@ -195,12 +195,7 @@
 			</dependency>
 
 
-			<!-- leopard start -->
-			<dependency>
-				<groupId>io.leopard.burrow</groupId>
-				<artifactId>burrow-lang</artifactId>
-				<version>${burrow.version}</version>
-			</dependency>
+
 
 			<dependency>
 				<groupId>io.leopard.test4j</groupId>
@@ -237,6 +232,7 @@
 		<module>leopard-schema</module>
 		<module>leopard-cache</module>
 		<module>leopard-lang</module>
+		<module>leopard-xparam</module>
 	</modules>
 
 

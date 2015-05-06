@@ -11,8 +11,8 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>io.leopard.burrow</groupId>
-			<artifactId>burrow-lang</artifactId>
+			<groupId>io.leopard</groupId>
+			<artifactId>leopard-lang</artifactId>
 		</dependency>
 
 		<dependency>

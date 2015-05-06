@@ -13,8 +13,8 @@
 		</dependency>
 
 		<dependency>
-			<groupId>io.leopard.burrow</groupId>
-			<artifactId>burrow-lang</artifactId>
+			<groupId>io.leopard</groupId>
+			<artifactId>leopard-lang</artifactId>
 		</dependency>
 		<!-- 
 		<dependency>
@@ -24,14 +24,14 @@
 		</dependency>
 		 -->
 		<dependency>
-			<groupId>io.leopard.data4j</groupId>
-			<artifactId>data4j-cache</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<groupId>io.leopard</groupId>
+			<artifactId>leopard-cache</artifactId>
+			<version>0.0.2-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>io.leopard</groupId>
 			<artifactId>leopard-jdbc</artifactId>
-			<version>0.1-SNAPSHOT</version>
+			<version>0.0.2-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>io.leopard.test4j</groupId>

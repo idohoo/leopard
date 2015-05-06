@@ -27,27 +27,17 @@
 		<url>https://github.com/tanhaichao/web4j/issues</url>
 	</issueManagement>
 
-	<properties>
-		<burrow.version>0.0.5-SNAPSHOT</burrow.version>
-		<data4j.version>0.0.1-SNAPSHOT</data4j.version>
-	</properties>
-
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
-				<groupId>io.leopard.burrow</groupId>
-				<artifactId>burrow-lang</artifactId>
-				<version>${burrow.version}</version>
+				<groupId>io.leopard</groupId>
+				<artifactId>leopard-lang</artifactId>
+				<version>0.0.2-SNAPSHOT</version>
 			</dependency>
 			<dependency>
 				<groupId>io.leopard</groupId>
 				<artifactId>leopard-redis</artifactId>
-				<version>0.1-SNAPSHOT</version>
-			</dependency>
-			<dependency>
-				<groupId>io.leopard.data4j</groupId>
-				<artifactId>data4j-schema</artifactId>
-				<version>${data4j.version}</version>
+				<version>0.0.2-SNAPSHOT</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
