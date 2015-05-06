@@ -16,16 +16,7 @@
 			<artifactId>spring-context</artifactId>
 		</dependency>
 
-		<dependency>
-			<groupId>io.leopard.data4j</groupId>
-			<artifactId>data4j-all</artifactId>
-			<exclusions>
-				<exclusion>
-					<artifactId>Memcached-Java-Client</artifactId>
-					<groupId>com.whalin</groupId>
-				</exclusion>
-			</exclusions>
-		</dependency>
+
 		<dependency>
 			<artifactId>Memcached-Java-Client</artifactId>
 			<groupId>com.whalin</groupId>
@@ -48,6 +39,11 @@
 		<dependency>
 			<groupId>io.leopard</groupId>
 			<artifactId>leopard-redis</artifactId>
+			<version>0.0.2-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>io.leopard</groupId>
+			<artifactId>leopard-mongo</artifactId>
 			<version>0.0.2-SNAPSHOT</version>
 		</dependency>
 		<dependency>

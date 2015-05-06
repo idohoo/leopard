@@ -16,6 +16,7 @@ import org.w3c.dom.Element;
  */
 public class MongoDsnBeanDefinitionParser implements BeanDefinitionParser {
 
+	
 	@Override
 	public BeanDefinition parse(Element element, ParserContext parserContext) {
 		String id = element.getAttribute("id");

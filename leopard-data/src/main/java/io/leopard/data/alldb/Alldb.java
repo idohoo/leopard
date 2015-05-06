@@ -5,6 +5,7 @@ import io.leopard.redis.Redis;
 
 import java.util.Date;
 
+
 //数据有三种存储(Memdb、Redis Strings、Mysql）
 //@Mysql，jdbc:是mysql jdbc数据源beanId，table:是用户表名称，key:主键字段(可以是数组)
 //@Strings，redis：redis数据源beanId，key:redis key规则

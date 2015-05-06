@@ -19,6 +19,7 @@ import org.springframework.jdbc.core.PreparedStatementSetter;
  */
 public class StatementParameter {
 
+	
 	private final List<Object> list = new ArrayList<Object>();
 	private final List<Class<?>> type = new ArrayList<Class<?>>();
 
